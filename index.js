@@ -6,10 +6,16 @@ const app = express()
 const port = 5000
 app.use(cors())
 const path = require("path");
+const Notes = require('./models/Note');
 app.use(express.json())
 // // first url which to check the server by defalut this requst  through this url is 
 app.get('/',(req,res)=>{
 res.send("hello ramshish it is generated on get reqest of URl(loacalhost:5000/) ")
+})
+app.get('/AllNote',async (req,res)=>{
+  const notes=await Notes.find();
+  console.log(notes)
+  res.json({"total note is":notes.length,"All Note":notes})
 })
 // // seond your to check route 
 // app.get('/',(req,res)=>{

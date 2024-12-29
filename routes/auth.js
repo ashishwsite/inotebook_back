@@ -126,9 +126,4 @@ router.post('/getuser', fetchuser, async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 })
-router.get('/fetchallNotes',async (req,res)=>{
-  const notes=await Notes.find();
-  console.log(notes)
-  res.json({"total note is":notes.length,"All Note":notes})
-})
 module.exports = router
