@@ -4,11 +4,11 @@
   "description": "this is backend for inotebbk",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "author": "ramashish",
+     "license": "ISC",
   },
-  "author": "ramashish",
-  "license": "ISC",
+  
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
