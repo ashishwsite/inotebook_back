@@ -11,7 +11,7 @@ app.use(express.json())
 // // first url which to check the server by defalut this requst  through this url is 
 app.get('/', (req,res)=>{
   const notes=Notes.find();
-res.json({"all_note":"empty note"})
+res.json({"all_note":"empty note",notes })
 })
 // app.get('/AllNote',async (req,res)=>{
 //   const notes=await Notes.find();
