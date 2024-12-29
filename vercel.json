@@ -1,10 +1,20 @@
 {
-    "version":2,
-    "builds":[{"src": "./index.js","use":"@vercel/node"}],
-    "routes":[{"src":"/(.*)","dest":"/"}],
-    "functions": {
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "functions": {
     "index.js": {
-      "maxDuration": 5 // All functions can run for a maximum of 5 seconds
+      "maxDuration": 5
     }
   }
 }
