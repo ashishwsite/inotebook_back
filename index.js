@@ -1,22 +1,23 @@
 const connectToMongo = require('./db');
 const express = require('express')
 var cors = require('cors') 
+const path = require("path");
+const Notes = require('./models/Note');
 connectToMongo();
 const app = express()
 const port = 5000
 app.use(cors())
-const path = require("path");
-const Notes = require('./models/Note');
 app.use(express.json())
 // // first url which to check the server by defalut this requst  through this url is 
-app.get('/',(req,res)=>{
-res.send("hello ramshish it is generated on get reqest of URl(loacalhost:5000/) ")
-})
-app.get('/AllNote',async (req,res)=>{
+app.get('/',async (req,res)=>{
   const notes=await Notes.find();
-  console.log(notes)
-  res.json({"total note is":notes.length,"All Note":notes})
+res.json({"all_note":notes})
 })
+// app.get('/AllNote',async (req,res)=>{
+//   const notes=await Notes.find();
+//   console.log(notes)
+//   res.json({"total note is":notes.length,"All Note":notes})
+// })
 // // seond your to check route 
 // app.get('/',(req,res)=>{
 //   res.send("this shown whenever  your requst is / or deafult")
