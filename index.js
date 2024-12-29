@@ -10,8 +10,10 @@ app.use(cors())
 app.use(express.json())
 // // first url which to check the server by defalut this requst  through this url is 
 app.get('/', (req,res)=>{
-  const notes=Notes.find();
-res.json({"all_note":"empty note",notes })
+res.json({"error":"async function take longer time ","async remove ":"note not fetch if asyn is remove lead internal error",
+  "route eroor":"as each route used async await function lead time exceed error","depl_platform":"vercel par to error aata hai "
+
+})
 })
 // app.get('/AllNote',async (req,res)=>{
 //   const notes=await Notes.find();
