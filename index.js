@@ -9,8 +9,8 @@ const port = 5000
 app.use(cors())
 app.use(express.json())
 // // first url which to check the server by defalut this requst  through this url is 
-app.get('/',async (req,res)=>{
-  const notes=await Notes.find();
+app.get('/', (req,res)=>{
+  const notes=Notes.find();
 res.json({"all_note":"empty note"})
 })
 // app.get('/AllNote',async (req,res)=>{
