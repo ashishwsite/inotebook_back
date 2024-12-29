@@ -27,5 +27,6 @@ app.use('/api/auth', require('./routes/auth'))// require(location of file where 
 app.use('/api/notes', require('./routes/notes'))
 
 app.listen(port, () => {
-  console.log(`iNotebook backend listening at http://localhost:${port}`)
+  console.log(` iNotebook backend listening at http://localhost:${port}`)
+  console.log("SERVER RUNNING FINE ")
 })
